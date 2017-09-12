@@ -97,7 +97,7 @@ const data = [
 ]
 
 const labelMusclesData = [
-"Sternocleidomastoid",
+"sternocleidomastoid",
 "deltoid",
 "pectoralis major",
 "rectus abdominis",
