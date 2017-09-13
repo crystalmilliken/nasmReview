@@ -74,8 +74,8 @@
             
         </div>
         <script>
-            const numberOfMuscles = labelMusclesData.length;
-            const copyData = labelMusclesData.slice();
+            const numberOfMuscles = labelPosteriorMuscles.length;
+            const copyData = labelPosteriorMuscles.slice();
             const shuffledArray = shuffleArray(copyData);
             const answers = [];
             const wrongAnswers = [];
@@ -96,11 +96,11 @@
                     answers.push(currentInput);
                 }
                 for(a = 0;a<answers.length;a++){
-                    if(answers[a] == labelMusclesData[a])
+                    if(answers[a] == labelPosteriorMuscles[a])
                     {  
                         score ++;
                     }else{
-                        wrongAnswers.push(labelMusclesData[a]);
+                        wrongAnswers.push(labelPosteriorMuscles[a]);
                     }
                 }
                 document.getElementById("wrongAnswersBox").innerHTML = `Your score is ${score}.`

@@ -124,3 +124,38 @@ const labelMusclesData = [
 "vastus medialis",
 "soleus and gastrocnemius"
 ]
+
+const labelPosteriorMuscles = [
+    "occipitofrontalis",
+    "splenius capitis",
+    "levator scapulae",
+    "supraspinatus",
+    "teres minor",
+    "infraspinatus",
+    "teres major",
+    "trceps brachii",
+    "serratus posterior inferior",
+    "external oblique",
+    "gluteus medius",
+    "gluteus maximus",
+    "semimembranosus",
+    "peroneus longus",
+    "tibialis posterior",
+    "epiccranial aponeurosis",
+    "rhomboids",
+    "trapezius",
+    "deltoid",
+    "latissimus dorsi",
+    "brachioradialis",
+    "extensor carpi radialis",
+    "extensor digitorum",
+    "extensor carpi ulnaris",
+    "flexor carpi ulnaris",
+    "gluteus minimus",
+    "gemellus muscles",
+    "biceps femoris",
+    "semitendinosus",
+    "gracilis",
+    "gastrocnemius",
+    "soleus"
+]
