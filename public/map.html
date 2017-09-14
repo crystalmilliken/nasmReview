@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="./data.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">NASM Prep</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link " href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Learning Resources
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="./map.html">Anterior Muscles</a>
+                            <a class="dropdown-item" href="./scramble.html">Scramble</a>
+                            <a class="dropdown-item" href="./multiple.html">Multiple Choice</a>
+                            <a class="dropdown-item" href="./labelAnterior.html">Label Anterior</a>
+                            <a class="dropdown-item" href="./labelPosterior.html">Label Posterior</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./contactme.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div style="margin-top:3em">
+            <div style="float:left; margin-left:3em">
+                <img src = "./images/mapAnterior.png" usemap="#muscleMap"/>
+                <map name="muscleMap">
+                <area shape="rect" coords="8,8,125,32"  alt="sternocleidomastoid" />
+                <area shape="rect" coords="92,52,143,69"  alt="deltoid"/>
+                <area shape="rect" coords="5,88,97,100"  alt="pectoralis major"/>
+                <area shape="rect" coords="6,122,109,134"  alt="rectus abdominis"/>
+                <area shape="rect" coords="5,157,99,182"  alt="abdominal external oblique"/>
+                <area shape="rect" coords="6,202,67,216"  alt="pectineus"/>
+                <area shape="rect" coords="6,236,47,260"  alt="adductor longus"/>
+                <area shape="rect" coords="6,285,59,295"  alt="sartorius"/>
+                <area shape="rect" coords="6,330,95,339"  alt="rectus femoris"/>
+                <area shape="rect" coords="6,360,95,373"  alt="vastus lateralis"/>
+                <area shape="rect" coords="6,395,99,409"  alt="fibularis longus"/>
+                <area shape="rect" coords="4,429,91,440"  alt="tibialis anterior"/>
+                <area shape="rect" coords="360,6,438,33"  alt="occipitofrontalis"/>
+                <area shape="rect" coords="362,74,418,86"  alt="trapezius"/>
+                <area shape="rect" coords="363,94,453,105"  alt="pectoralis minor"/>
+                <area shape="rect" coords="363,113,457,128"  alt="serratus anterior"/>
+                <area shape="rect" coords="363,135,443,147"  alt="bicep brachii"/>
+                <area shape="rect" coords="363,155,419,166"  alt="brachialis"/>
+                <area shape="rect" coords="363,174,447,185"  alt="brachioradialis"/>
+                <area shape="rect" coords="363,194,444,205"  alt="pronator teres"/>
+                <area shape="rect" coords="363,216,476,225"  alt="flexor carpi radialis"/>
+                <area shape="rect" coords="363,242,476,255"  alt="tensor fasciae latae"/>
+                <area shape="rect" coords="329,313,380,325"  alt="iliopsoas"/>
+                <area shape="rect" coords="329,336,372,349"  alt="gracilis"/>
+                <area shape="rect" coords="329,368,419,381"  alt="vastus medialis"/>
+                <area shape="rect" coords="329,393,412,422"  alt="soleus and gastrocnemius"/>
+                </map>
+                <p  id="information" style="padding:1em;border:1px solid black; max-width:30em;display:inline-block;align-items: center;">
+                Hover over one of the muscle names to view it's description.
+                </p>
+            </div>
+            
+        </div>
+        <script>
+           
+            $("area").mouseover(function(a)
+                {
+                    let target = $(a.target);
+
+                    let currentName = target.attr("alt");
+                   return data.map((x)=>{
+                        if(x.name == currentName){
+                            console.log(x.name)
+                            document.getElementById("information").innerHTML = x.description;
+                        }
+                    })
+                
+              });
+        </script>
+        
+    </body>
+</html>

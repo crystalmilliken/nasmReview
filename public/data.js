@@ -15,7 +15,7 @@ const data = [
     image:"./images/trapezius.png"
 },
 {
-    name:"Sternocleidomastoid",
+    name:"sternocleidomastoid",
     description:"Commonly abbreviated as SCM, a paired muscle in the superficial layers of the side of the neck.",
     image:"./images/scm.png"
 },
@@ -93,9 +93,79 @@ const data = [
     name:"flexor carpi radialis",
     description:"A muscle in the forearm that acts to flex and abduct the wrist",
     image:"./images/Flexor-carpi-radialis.png"
+},
+{
+    name:"abdominal external oblique",
+    description:"The largest and the most superficial (outermost) of the three flat muscles of the lateral anterior abdomen.",
+    image:"./images/abdominal_external_oblique.png"
+},
+{
+    name:"pectineus",
+    description:"A flat, quadrangular muscle, situated at the anterior (front) part of the upper and medial (inner) aspect of the thigh. It is the most anterior adductor of the hip. The muscle does adduct and internally rotate the thigh but its primary function is hip flexion.",
+    image:"./images/pectineus.png"
+},
+{
+    name:"adductor longus",
+    description:"A skeletal muscle located in the thigh. One of the adductor muscles of the hip, its main function is to adduct the thigh and it is innervated by the obturator nerve. It forms the medial wall of the femoral triangle.",
+    image:"./images/adductorLongus.png"
+},
+{
+    name:"sartorius",
+    description:"the longest muscle in the human body. It is a long, thin, superficial muscle that runs down the length of the thigh in the anterior compartment.",
+    image:"./images/sartorius.png"
+},
+{
+    name:"rectus femoris",
+    description:"Is situated in the middle of the front of the thigh; it is fusiform in shape, and its superficial fibers are arranged in a bipenniform manner, the deep fibers running straight (rectus) down to the deep aponeurosis. Its functions are to flex the thigh at the hip joint and to extend the leg at the knee joint",
+    image:"./images/rectusFemoris.png"
+},
+{
+    name:"fibularis longus",
+    description:"A superficial muscle in the lateral compartment of the leg, and acts to evert and plantarflex the ankle. The muscle, the longest and most superficial of the three peroneus muscles, is attached proximally to the head of the fibula and its 'belly' runs down most of this bone.",
+    image:"./images/fibularisLongus.png"
+},
+{
+    name:"vastus lateralis",
+    description:"The largest and most powerful part of the quadriceps femoris, a muscle in the thigh. Together with other muscles of the quadriceps group, it serves to extend the knee joint, moving the lower leg forward.",
+    image:"./images/vastusLateralis.png"
+},
+{
+    name:"tibialis anterior",
+    description:"The most central of all the leg muscles, and is located in the deep posterior compartment of the leg. It is the key stabilizing muscle of the lower leg",
+    image:"./images/tibialis.png"
+},
+{
+    name:"occipitofrontalis",
+    description:"A muscle which covers parts of the skull. It consists of two parts or bellies: The occipital belly, near the occipital bone, and the frontal belly, near the frontal bone. In humans, the occipitofrontalis only serves for facial expressions.",
+    image:"./images/occipitofrontalis.png"
+},
+{
+    name:"pectoralis minor",
+    description:"A thin, triangular muscle, situated at the upper part of the chest, beneath the pectoralis major in the human body.",
+    image:"./images/pectoralisminor.png"
+},
+{
+    name:"pronator teres",
+    description:"A muscle of the human body (located mainly in the forearm) that, along with the Pronator quadratus, serves to pronate the forearm (turning it so that the palm faces posteriorly when from the anatomical position).",
+    image:"./images/pronatorteres.png"
+},
+{
+    name:"gracilis",
+    description:"The most superficial muscle on the medial side of the thigh. It is thin and flattened, broad above, narrow and tapering below.",
+    image:"./images/gracilis.png"
+},
+{
+    name:"vastus medialis",
+    description:"An extensor muscle located medially in the thigh that extends the knee. It is part of the quadriceps muscle group.",
+    image:"./images/vastusmedialis.png"
+},
+{
+    name:"soleus and gastrocnemius",
+    description:"Muscles of the calf. The primary function of these two muscles are to work together as plantar flexors (bending the foot back at the ankle joint) as well as flexing the leg at the knee(bending the knee) in addition to assisting propulsion and stabilisation during the actions of walking, running and jumping.",
+    image:"./images/soleus.png"
 }
 ]
-
+ 
 const labelMusclesData = [
 "sternocleidomastoid",
 "deltoid",
@@ -133,7 +203,7 @@ const labelPosteriorMuscles = [
     "teres minor",
     "infraspinatus",
     "teres major",
-    "trceps brachii",
+    "triceps brachii",
     "serratus posterior inferior",
     "external oblique",
     "gluteus medius",
