@@ -76,7 +76,7 @@
                 <area shape="rect" coords="329,393,412,422"  alt="soleus and gastrocnemius"/>
                 </map>
                 <p  id="information" style="padding:1em;border:1px solid black; max-width:30em;display:inline-block;align-items: center;">
-                Hover over one of the muscle names to view it's description.
+                Hover over one of the muscle names to view suggested exercises.
                 </p>
             </div>
             
@@ -90,8 +90,12 @@
                     let currentName = target.attr("alt");
                    return data.map((x)=>{
                         if(x.name == currentName){
-                            console.log(x.name)
-                            document.getElementById("information").innerHTML = x.description;
+                            if(x.exercises){
+                                document.getElementById("information").innerHTML = x.exercises;
+                            }else{
+                                document.getElementById("information").innerHTML = "Pick a different muscle";
+                            }
+                            
                         }
                     })
                 
