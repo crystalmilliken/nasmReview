@@ -90,9 +90,10 @@ const data = [
     exercises:"Best exercises are:</br>Bear crawl variations, dead-stop pushups, chest and bench press, punching"
 },
 {
-    name:"flexor carpi ulnaris muscle",
+    name:"flexor carpi ulnaris",
     description:"A muscle of the human forearm that acts to flex and adduct (medial deviation) the hand.",
-    image:"./images/FCU.png"
+    image:"./images/FCU.png",
+    exercises:"Best exercises are:</br>Curl variations and reverse curl variations"
 },
 {
     name:"abductor pollicis brevis",
@@ -187,9 +188,147 @@ const data = [
     description:"Muscles of the calf. The primary function of these two muscles are to work together as plantar flexors (bending the foot back at the ankle joint) as well as flexing the leg at the knee(bending the knee) in addition to assisting propulsion and stabilisation during the actions of walking, running and jumping.",
     image:"./images/soleus.png",
     exercises:"Best exercises:</br>Standing calf raises(lock knees to target gastrocnemius more), seated calf raises"
+},
+{
+    name:"splenius capitis",
+    description:"A broad, straplike muscle in the back of the neck. It pulls on the base of the skull from the vertebrae in the neck and upper thorax. It is involved in movements such as shaking the head.",
+    image:"./images/splenius_capitis.png",
+    exercises:"These exercises will help with strength and stretching:</br> Nexk rotations, chin to chest, lateral neck flexion stretch"
+},
+{
+    name:"levator scapulae",
+    description:"A skeletal muscle situated at the back and side of the neck. As the Latin name suggests, its main function is to lift the scapula.",
+    image:"./images/levator_scapulae.png",
+    exercises:"Exerciss good for strengthening and postural correction are:</br> Shrug varitions, lateral neck flexion, neck extensions"
+},
+{
+    name:"supraspinatus",
+    description:"A relatively small muscle of the upper back that runs from the supraspinatous fossa superior portion of the scapula (shoulder blade) to the greater tubercle of the humerus. It is one of the four rotator cuff muscles and also abducts the arm at the shoulder.",
+    image:"./images/supraspinatus.png",
+    exercises:"A few exercises to help are: </br>Prone external rotation, side-lying external rotation, external rotation(with resistance)"
+},
+{
+    name:"teres minor",
+    description:"A narrow, elongated muscle of the rotator cuff.",
+    image:"./images/teres_minor.png",
+    exercises:"Some of the most effective exercises for strengthening the teres minor are:</br> variations of the external rotation exercise."
+},
+{
+    name:"infraspinatus",
+    description:"A thick triangular muscle, which occupies the chief part of the infraspinatous fossa.[1] As one of the four muscles of the rotator cuff, the main function of the infraspinatus is to externally rotate the humerus and stabilize the shoulder joint.",
+    image:"./images/infraspinatus.png",
+    exercises:"A few good exercises are:</br>Incline reverse lateral dumbbell raise, external-rotation variations"
+},
+{
+    name:"teres major",
+    description:"A muscle of the upper limb. It attaches to the scapula and the humerus and is one of the seven scapulohumeral muscles. It is a thick but somewhat flattened muscle.",
+    image:"./images/teres_major.png",
+    exercises:"Best exercises:</br>Horizontal rotation variations, one-arm dumbbell rows"
+},
+{
+    name:"serratus posterior inferior",
+    description:"Draws the lower ribs backward and downward to assist in rotation and extension of the trunk.",
+    image:"./images/serratus_posterior.png",
+    exercises:"Best exercises:</br>Lower back flexion, hip flexor exercises, cross reverse lunge"
+},
+{
+    name:"gluteus medius",
+    description:"One of the three gluteal muscles, is a broad, thick, radiating muscle, situated on the outer surface of the pelvis.",
+    image:"./images/gluteus_medius.png",
+    exercises:"Some of the best exercises are:</br>Side-lying clam variations(with/without band), lateral leg raise, cable hip external rotation"
+},
+{
+    name:"gluteus maximus",
+    description:"It is the main extensor muscle of the hip. It is the largest and most superficial of the three gluteal muscles and makes up a large portion of the shape and appearance of each side of the hips.",
+    image:"./images/gluteus_maximus.png",
+    exercises:"Best exercises are:</br>Hip thrusts variations, squat variations, dead lift, walking dumbbell lunges, back extension, bulgarian split squat, cable kick bacl, clam shell variations"
+},
+{
+    name:"semimembranosus",
+    description:"The medial-most of the three hamstring muscles.",
+    image:"./images/semimembranosus.png",
+    exercises:"Some exercises are:</br> Seated leg curl, dumbbell lunge, lying leg curl, barbell stiff leg deadlift"
+},
+{
+    name:"peroneus longus",
+    description:"A superficial muscle in the lateral compartment of the leg, and acts to evert and plantarflex the ankle.",
+    image:"./images/peroneus_longus.png",
+    exercises:"Best exercises are:</br>Calf raises, angled calf raises"
+},
+{
+    name:"tibialis posterior",
+    description:"The most central of all the leg muscles, and is located in the deep posterior compartment of the leg. It is the key stabilizing muscle of the lower leg.",
+    image:"./images/soleus.png",
+    exercises:"Best exercises are:</br>Calf raises, stretches, weight bearing exercises"
+},
+{
+    name:"rhomboids",
+    description:"Rhombus-shaped muscles associated with the scapula and are chiefly responsible for its retraction.",
+    image:"./images/rhomboids.png",
+    exercises:"Some exercises are:</br>Incline pullups, bent over rows, face pulls"
+},
+{
+    name:"latissimus dorsi",
+    description:"A large, flat muscle on the back that stretches to the sides, behind the arm, and is partly covered by the trapezius on the back near the midline.",
+    image:"./images/latissimus_dorsi.png",
+    exercises:"A few exercises are:</br>Overhead pulldowns, seated row, pullups, bent over row"
+},
+{
+    name:"extensor carpi radialis",
+    description:"One of the five main muscles that control movements at the wrist.",
+    image:"./images/extensor_carpi_radialis.png",
+    exercises:"Best exercises:</br>Wrist extension variations"
+},
+{
+    name:"extensor digitorum",
+    description:"A muscle of the posterior forearm. It extends the medial four digits of the hand.",
+    image:"./images/extensor_digitorum.png",
+    exercises:"Best exercises are:</br>Wrist extension and wrist flexion variations."
+},
+{
+    name:"gluteus minimus",
+    description:"The smallest of the three gluteal muscles, is situated immediately beneath the gluteus medius.",
+    image:"./images/gluteus_minimus.png",
+    exercises:"Best exercises are:</br>Variations of the clam, side plank, and hip abduction exercises"
+},
+{
+    name:"gemellus muscles",
+    description:"Muscles that help to steady the femoral head in the acetabulum. Both muscles also help to laterally rotate the extended thigh and abduct the flexed thigh at the hip",
+    image:"./images/gemellus.png",
+    exercises:"Best exercises are:</br>Seated cable internal and external rotation exercises, "
+},
+{
+    name:"biceps femoris",
+    description:"A muscle of the thigh located to the posterior, or back. As its name implies, it has two parts, one of which (the long head) forms part of the hamstrings muscle group.",
+    image:"./images/biceps_femoris.png",
+    exercises:"Best exercises are:</br>Squat variations, standing hamstring curl"
+},
+{
+    name:"semitendinosus",
+    description:"A long superficial muscle in the back of the thigh.",
+    image:"./images/soleus.png",
+    exercises:"Best exercises are:</br>Seated leg curl, dumbbell lunge, lying leg curl, barbell stiff leg deadlift"
+},
+{
+    name:"gastrocnemius",
+     description:"One of the two muscles of the calf. The primary function of these two muscles are to work together as plantar flexors (bending the foot back at the ankle joint) as well as flexing the leg at the knee(bending the knee) in addition to assisting propulsion and stabilisation during the actions of walking, running and jumping.",
+    image:"./images/soleus.png",
+    exercises:"Best exercises:</br>Variations of standing calf raises, seated calf raises"
+},
+{
+    name:"soleus",
+     description:"One of the two muscles of the calf. The primary function of these two muscles are to work together as plantar flexors (bending the foot back at the ankle joint) as well as flexing the leg at the knee(bending the knee) in addition to assisting propulsion and stabilisation during the actions of walking, running and jumping.",
+    image:"./images/soleus.png",
+    exercises:"Best exercises:</br>Variations of seated calf raises"
+},
+{
+    name:"extensor carpi ulnaris",
+     description:"Located on the ulnar side of the forearm. It acts to extend and adduct at the carpus/wrist from anatomical position.",
+    image:"./images/extensor_carpi_ulnaris.png",
+    exercises:"Best exercises:</br>Variations of wrist extension and wrist flexions, grip strength exercises"
 }
 ]
- 
+
 const labelMusclesData = [
 "sternocleidomastoid",
 "deltoid",
@@ -227,7 +366,7 @@ const labelPosteriorMuscles = [
     "teres minor",
     "infraspinatus",
     "teres major",
-    "triceps brachii",
+    "tricep brachii",
     "serratus posterior inferior",
     "external oblique",
     "gluteus medius",
@@ -235,7 +374,7 @@ const labelPosteriorMuscles = [
     "semimembranosus",
     "peroneus longus",
     "tibialis posterior",
-    "epiccranial aponeurosis",
+    "epicranial aponeurosis",
     "rhomboids",
     "trapezius",
     "deltoid",

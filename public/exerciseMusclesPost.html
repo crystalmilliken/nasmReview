@@ -48,34 +48,39 @@
         </nav>
         <div style="margin-top:3em">
             <div style="float:left; margin-left:3em">
-                <img src = "./images/mapAnterior.png" usemap="#muscleMap"/>
+                <img src = "./images/mapPosterior.png" usemap="#muscleMap"/>
                 <map name="muscleMap">
-                <area shape="rect" coords="8,8,125,32"  alt="sternocleidomastoid" />
-                <area shape="rect" coords="92,52,143,69"  alt="deltoid"/>
-                <area shape="rect" coords="5,88,97,100"  alt="pectoralis major"/>
-                <area shape="rect" coords="6,122,109,134"  alt="rectus abdominis"/>
-                <area shape="rect" coords="5,157,99,182"  alt="abdominal external oblique"/>
-                <area shape="rect" coords="6,202,67,216"  alt="pectineus"/>
-                <area shape="rect" coords="6,236,47,260"  alt="adductor longus"/>
-                <area shape="rect" coords="6,285,59,295"  alt="sartorius"/>
-                <area shape="rect" coords="6,330,95,339"  alt="rectus femoris"/>
-                <area shape="rect" coords="6,360,95,373"  alt="vastus lateralis"/>
-                <area shape="rect" coords="6,395,99,409"  alt="fibularis longus"/>
-                <area shape="rect" coords="4,429,91,440"  alt="tibialis anterior"/>
-                <area shape="rect" coords="360,6,438,33"  alt="occipitofrontalis"/>
-                <area shape="rect" coords="362,74,418,86"  alt="trapezius"/>
-                <area shape="rect" coords="363,94,453,105"  alt="pectoralis minor"/>
-                <area shape="rect" coords="363,113,457,128"  alt="serratus anterior"/>
-                <area shape="rect" coords="363,135,443,147"  alt="bicep brachii"/>
-                <area shape="rect" coords="363,155,419,166"  alt="brachialis"/>
-                <area shape="rect" coords="363,174,447,185"  alt="brachioradialis"/>
-                <area shape="rect" coords="363,194,444,205"  alt="pronator teres"/>
-                <area shape="rect" coords="363,216,476,225"  alt="flexor carpi radialis"/>
-                <area shape="rect" coords="363,242,476,255"  alt="tensor fasciae latae"/>
-                <area shape="rect" coords="329,313,380,325"  alt="iliopsoas"/>
-                <area shape="rect" coords="329,336,372,349"  alt="gracilis"/>
-                <area shape="rect" coords="329,368,419,381"  alt="vastus medialis"/>
-                <area shape="rect" coords="329,393,412,422"  alt="soleus and gastrocnemius"/>
+                <area shape="rect" coords="4,8,94,34"  alt="occipitofrontalis" />
+                <area shape="rect" coords="6,41,94,53"  alt="splenius capitis"/>
+                <area shape="rect" coords="4,64,88,96"  alt="levator scapulae"/>
+                <area shape="rect" coords="6,86,90,97"  alt="supraspinatus"/>
+                <area shape="rect" coords="6,106,73,117"  alt="teres minor"/>
+                <area shape="rect" coords="6,128,80,141"  alt="infraspinatus"/>
+                <area shape="rect" coords="6,148,75,159"  alt="teres major"/>
+                <area shape="rect" coords="4,168,92,184"  alt="triceps brachii"/>
+                <area shape="rect" coords="3,192,50,218"  alt="serratus posterior inferior"/>
+                <area shape="rect" coords="5,225,101,241"  alt="abdominal external oblique"/>
+                <area shape="rect" coords="6,251,74,272"  alt="gluteus medius"/>
+                <area shape="rect" coords="7,258,74,309"  alt="gluteus maximus"/>
+                <area shape="rect" coords="6,320,118,332"  alt="semimembranosus"/>
+                <area shape="rect" coords="5,362,108,375"  alt="peroneus longus"/>
+                <area shape="rect" coords="3,392,103,406"  alt="tibialis posterior"/>
+                <area shape="rect" coords="361,76,431,88"  alt="rhomboids"/>
+                <area shape="rect" coords="361,97,420,109"  alt="trapezius"/>
+                <area shape="rect" coords="363,120,405,130"  alt="deltoid"/>
+                <area shape="rect" coords="363,139,455,150"  alt="latissimus dorsi"/>
+                <area shape="rect" coords="358,159,449,171"  alt="brachioradialis"/>
+                <area shape="rect" coords="363,179,491,194"  alt="extensor carpi radialis"/>
+                <area shape="rect" coords="360,202,473,214"  alt="extensor digitorum"/>
+                <area shape="rect" coords="363,224,473,254"  alt="extensor carpi ulnaris"/>
+                <area shape="rect" coords="361,245,473,257"  alt="flexor carpi ulnaris"/>
+                <area shape="rect" coords="363,264,461,276"  alt="gluteus minimus"/>
+                <area shape="rect" coords="362,284,470,295"  alt="gemellus muscles"/>
+                <area shape="rect" coords="328,318,413,330"  alt="biceps femoris"/>
+                <area shape="rect" coords="328,338,420,347"  alt="semitendinosus"/>
+                <area shape="rect" coords="325,354,376,367"  alt="gracilis"/>
+                <area shape="rect" coords="328,372,483,386"  alt="gastrocnemius"/>
+                <area shape="rect" coords="327,393,371,410"  alt="soleus"/>
                 </map>
                 <p  id="information" style="padding:1em;border:1px solid black; max-width:30em;display:inline-block;align-items: center;">
                 Hover over one of the muscle names to view it's description.
@@ -83,22 +88,43 @@
             </div>
             
         </div>
+        <!--<div style="clear:both">
+                <form name="pointform" method="post">
+<div id="pointer_div" onclick="point_it(event)" style = "background-image:url('./images/mapPosterior.png');width:500px;height:560px;">
+</div>
+
+</form> 
+</div>-->
         <script>
            
-            $("area").mouseover(function(a)
+           $("area").mouseover(function(a)
                 {
                     let target = $(a.target);
 
                     let currentName = target.attr("alt");
                    return data.map((x)=>{
                         if(x.name == currentName){
-                            console.log(x.name)
-                            document.getElementById("information").innerHTML = x.description;
+                            if(x.exercises){
+                                document.getElementById("information").innerHTML = x.exercises;
+                            }else{
+                                document.getElementById("information").innerHTML = "Pick a different muscle";
+                            }
+                            
                         }
                     })
                 
               });
         </script>
-        
+
+
+        <!--<script language="JavaScript">
+function point_it(event){
+	let pos_x = event.offsetX?(event.offsetX):event.pageX-document.getElementById("pointer_div").offsetLeft;
+	let pos_y = event.offsetY?(event.offsetY):event.pageY-document.getElementById("pointer_div").offsetTop;
+	
+    console.log(pos_x, pos_y)
+}-->
+</script>
+
     </body>
 </html>
