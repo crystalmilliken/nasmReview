@@ -1,0 +1,15 @@
+@media (max-width: 500px){
+    #imageHolder{
+        min-width:100%;
+    }
+    #inputs{
+        width:100%;
+        clear:both;
+    }
+    #answersBox{
+        min-width:100%;
+    }
+    #mainContent{
+        width:100%;
+    }
+}

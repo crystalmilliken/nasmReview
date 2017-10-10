@@ -1,16 +1,9 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-         <style>
-             @media (max-width: 500px){
-                 #imageHolder{
-                     width:100%;
-                     height:50%;
-                 }
-             }
-        </style>
-        <script src="./data.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/main.css"/>
+        <script src="./scripts/data.js"></script>
     </head>
     <body>
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -39,6 +32,7 @@
                             <a class="dropdown-item" href="./labelPosterior.html">Label Posterior</a>
                             <a class="dropdown-item" href="./exerciseMuscles.html">Anterior Muscle Exercises</a>
                             <a class="dropdown-item" href="./exerciseMusclesPost.html">Posterior Muscle Exercises</a>
+                            <a class="dropdown-item" href="./termsQuiz.html">NASM Terms Quiz</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -56,111 +50,10 @@
         </div>
         <input id="userAttempt">
         </input>
-        
         <button id="try" style="margin-bottom:2em">Try</button></br>
         <button id="restart" style="margin-bottom:3em">Restart</button>
-
         </div>
-        <script>
-            const muscles = shuffleArray(data);
-            let num = 0;
-            let Score = 0;
-            let currentMuscle = "";
-            let multipleChoiceArray = [];
-            let tryNum = 0;
-            function shuffleArray(array) {
-                for (let i = array.length - 1; i > 0; i--) {
-                    let j = Math.floor(Math.random() * (i + 1));
-                    let temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
-                }
-                return array;
-            }
-
-           
-            function scrambleWord(wordString){
-                let a = wordString.split("")
-                    , n = a.length;
-                for(let i = n - 1; i >0; i--){
-                    let j = Math.floor(Math.random() * (i +1));
-                    let temp = a[i];
-                    a[i] = a[j];
-                    a[j] = temp; 
-                }
-                return a.join("");
-            }
-            function splitWords(wordToSplit){
-                let newScrambledWord = [];
-                let a = wordToSplit
-                    , n = wordToSplit.split(" ");
-                n.map((x)=>{
-                    return newScrambledWord.push(scrambleWord(x));
-                })
-                return newScrambledWord.join(" ");
-                
-            }
-            function populateCurrentMuscle(){
-                let scrambledMuscle = ""
-                if(currentMuscle.indexOf(" ")>0){
-                    scrambledMuscle = splitWords(currentMuscle);
-                    console.log(`currentmuscle: ${currentMuscle}`);//for testing purposes
-                    document.getElementById("imageHolder").innerHTML = `<img id=${muscles[num].name} src=${muscles[num].image} style="display:inline;height:100%"></img>`;
-                    document.getElementById("muscleDescriptionContainer").innerHTML = `<p>${muscles[num].description}</p>`;
-                    document.getElementById("unscramble").innerHTML = scrambledMuscle;
-
-
-                }else{
-                scrambledMuscle = scrambleWord(currentMuscle);
-                console.log(`currentmuscle: ${currentMuscle}`);//for testing purposes
-                document.getElementById("imageHolder").innerHTML = `<img id=${muscles[num].name} src=${muscles[num].image} style="display:inline;height:100%"></img>`;
-                document.getElementById("muscleDescriptionContainer").innerHTML = `<p>${muscles[num].description}</p>`;
-                document.getElementById("unscramble").innerHTML = scrambledMuscle;
-
-            }
-            }
-            function beginQuiz(){
-                if(num < muscles.length){
-                let muscleObject = muscles[num];
-                currentMuscle = muscles[num].name;
-                let multipleNum = 0;
-                muscles.map((x)=>{
-                    if(x.name == muscles[num].name){
-                        populateCurrentMuscle();
-                    }
-                    
-                })
-                num++;
-                }else{
-                    alert(`Your score is ${Score}`);
-                    document.getElementById("imageHolder").innerHTML = "";
-                    document.getElementById("muscleDescriptionContainer").innerHTML = "";
-                    document.getElementById("unscramble").innerHTML = "";
-                }
-            
-            }
-            function tryWord(){
-                let guess = document.getElementById("userAttempt").value;
-                guess = guess.trim();
-                if(guess == currentMuscle){
-                    Score++;
-                    document.getElementById("userAttempt").value = "";
-                    beginQuiz();
-                }else if(tryNum < 3){
-                    tryNum++;
-                    alert("try again")
-                }else{
-                    alert(`Your guess was ${guess}. The answer was ${currentMuscle}`)
-                    beginQuiz();
-                }
-            }
-            function restart(){
-                location.reload();
-            }
-            beginQuiz()
-            document.getElementById("restart").addEventListener("click",restart);
-            document.getElementById("try").addEventListener("click",tryWord);
-        </script>
+        <script src="./scripts/scrambleScript.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
